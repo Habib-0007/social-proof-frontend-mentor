@@ -116,6 +116,7 @@ body {
     align-items: center;
     height: 100svh;
     text-align: left;
+    padding-inline: 70px;
   }
 
   .top {
