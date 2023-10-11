@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+:root {
+  /* Primary */
+
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+
+  /* Neutral */
+
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  padding: 20px;
+  text-align: center;
+}
+
+.top {
+  background-image: url("images/bg-pattern-top-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.topleft h1 {
+  font-size: 2.5em;
+  color: var(--Very-Dark-Magenta);
+  padding-inline: 20px;
+  font-weight: 800;
+}
+
+.topleft p {
+  font-size: 1.1em;
+  color: var(--Very-Dark-Magenta);
+  padding: 15px 0;
+  line-height: 20px;
+}
+
+.topright p {
+  padding-bottom: 10px;
+}
+
+.topright div {
+  width: 100%;
+  padding: 10px 15px;
+  background: var(--Light-Grayish-Magenta);
+  margin: 10px 0;
+  color: var(--Very-Dark-Magenta);
+  font-weight: bold;
+}
+
+.cards {
+  margin-top: 20px;
+  background-image: url("images/bg-pattern-bottom-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.card {
+  padding: 16px 12px;
+  background: var(--Very-Dark-Magenta);
+  color: var(--Light-Grayish-Magenta);
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.card > div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.card > div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 7px;
+}
+
+.card > div div p {
+  color: var(--Soft-Pink);
+  font-weight: bold;
+}
+
+.card div img {
+  border-radius: 50%;
+  transform: scale(0.7);
+}
+
+.card > p {
+  padding: 12px 10px;
+  font-size: 1.2em;
+  line-height: 25px;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+    text-align: left;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 150px;
+    background-image: url("images/bg-pattern-top-desktop.svg");
+  }
+
+  .top section.topleft {
+    width: 65%;
+  }
+
+  .top > section {
+    width: 100%;
+  }
+
+  .topleft h1 {
+    padding: 0;
+  }
+
+  .topright div {
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .topright div:nth-child(2) {
+    margin-left: 60px;
+  }
+
+  .topright div:nth-child(3) {
+    margin-left: 120px;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 0;
+    background-image: url("images/bg-pattern-bottom-desktop.svg");
+  }
+
+  .cards .card {
+    width: 100%;
+  }
+
+  .cards .card:nth-child(2) {
+    margin-top: 70px;
+  }
+
+  .cards .card:nth-child(3) {
+    margin-top: 140px;
+  }
+}
